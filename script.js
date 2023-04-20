@@ -24,34 +24,42 @@ document.addEventListener('keypress', (e) => {
     switch (keypressed) {
         case 'a':
             console.log('a');
+            sound_a.currentTime=0;
             sound_a.play();
             break;
         case 's':
             console.log('s');
+            sound_s.currentTime=0;
             sound_s.play();
             break;
         case 'j':
             console.log('j');
+            sound_j.currentTime=0;
             sound_j.play();
             break;
         case 'k':
             console.log('k');
+            sound_k.currentTime=0;
             sound_k.play();
             break;
         case 'z':
             console.log('z');
+            sound_z.currentTime=0;
             sound_z.play();
             break;
         case 'x':
             console.log('x');
+            sound_x.currentTime=0;
             sound_x.play();
             break;
         case 'n':
             console.log('n');
+            sound_n.currentTime=0;
             sound_n.play();
             break;
         case 'm':
             console.log('m');
+            sound_m.currentTime=0;
             sound_m.play();
             break;
         default:
