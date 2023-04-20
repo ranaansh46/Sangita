@@ -27,11 +27,6 @@ function play_sound(sound,button){
     }, sound.duration + 250);
 }
 
-button_a.addEventListener('click',()=>{
-    button_a.classList.add('pressed')
-    button_a.classList.remove('pressed')
-})
-
 // this section makes the sound on keypress
 document.addEventListener('keypress', (e) => {
     keypressed = (e.key);
