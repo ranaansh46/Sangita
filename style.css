@@ -1,0 +1,38 @@
+*{
+    padding:0px;
+    margin:0px;
+}
+.flex-wrapper{
+    margin-top: 25px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+}
+.button-row{
+    display: flex;
+    flex-direction: row;
+    gap:50px;
+}
+.button-row div{
+    min-height: 15vw;
+    min-width:15vw;
+    background-color: white;
+    color:black;
+    border: 2px solid black;
+    box-shadow: 4px 4px 0px black;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 3.5em;
+    cursor: pointer;
+}
+.button-row div:hover,.button-row div:active{
+    transform: translate(4px,4px);
+    box-shadow: 0px 0px 0px black;
+    transition: 0.1s;
+}
+
