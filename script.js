@@ -1,4 +1,4 @@
-
+// buttons
 let button_a = document.getElementById('music-button1');
 let button_s = document.getElementById('music-button2');
 let button_j = document.getElementById('music-button3');
@@ -8,6 +8,7 @@ let button_x = document.getElementById('music-button6');
 let button_n = document.getElementById('music-button7');
 let button_m = document.getElementById('music-button8');
 
+// sounds
 let sound_a = new Audio("Music/a.wav");
 let sound_s = new Audio("Music/s.wav");
 let sound_j = new Audio("Music/j.wav");
@@ -17,50 +18,48 @@ let sound_x = new Audio("Music/x.wav");
 let sound_n = new Audio("Music/n.wav");
 let sound_m = new Audio("Music/m.wav");
   
+function play_sound(sound,button){
+    sound.currentTime=0;
+    sound.play();
+    button.classList.add('pressed')
+    setTimeout(() => {
+        button.classList.remove('pressed')
+    }, sound.duration + 250);
+}
 
+button_a.addEventListener('click',()=>{
+    button_a.classList.add('pressed')
+    button_a.classList.remove('pressed')
+})
+
+// this section makes the sound on keypress
 document.addEventListener('keypress', (e) => {
     keypressed = (e.key);
         
     switch (keypressed) {
         case 'a':
-            console.log('a');
-            sound_a.currentTime=0;
-            sound_a.play();
+            play_sound(sound_a,button_a);
             break;
         case 's':
-            console.log('s');
-            sound_s.currentTime=0;
-            sound_s.play();
+            play_sound(sound_s,button_s);
             break;
         case 'j':
-            console.log('j');
-            sound_j.currentTime=0;
-            sound_j.play();
+            play_sound(sound_j,button_j);
             break;
         case 'k':
-            console.log('k');
-            sound_k.currentTime=0;
-            sound_k.play();
+            play_sound(sound_k,button_k);
             break;
         case 'z':
-            console.log('z');
-            sound_z.currentTime=0;
-            sound_z.play();
+            play_sound(sound_z,button_z);
             break;
         case 'x':
-            console.log('x');
-            sound_x.currentTime=0;
-            sound_x.play();
+            play_sound(sound_x,button_x);
             break;
         case 'n':
-            console.log('n');
-            sound_n.currentTime=0;
-            sound_n.play();
+            play_sound(sound_n,button_n);
             break;
         case 'm':
-            console.log('m');
-            sound_m.currentTime=0;
-            sound_m.play();
+            play_sound(sound_m,button_m);
             break;
         default:
             break;

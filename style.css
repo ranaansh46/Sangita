@@ -2,27 +2,31 @@
     padding:0px;
     margin:0px;
 }
+body{
+    background-color:#393646;
+}
 .flex-wrapper{
-    margin-top: 25px;
-    padding: 50px;
+    margin-top: 15px;
+    padding: 25px;
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 35px;
     align-items: center;
     justify-content: center;
 }
+
 .button-row{
     display: flex;
     flex-direction: row;
-    gap:50px;
+    gap:35px;
 }
+
 .button-row div{
-    min-height: 15vw;
-    min-width:15vw;
-    background-color: white;
-    color:black;
-    border: 2px solid black;
-    box-shadow: 4px 4px 0px black;
+    font-family: 'ubuntu';
+    min-height: 20vw;
+    min-width:20vw;
+    background-color:#4F4557;
+    color:#BA90C6;
     border-radius: 15px;
     align-items: center;
     justify-content: center;
@@ -30,9 +34,18 @@
     font-size: 3.5em;
     cursor: pointer;
 }
-.button-row div:hover,.button-row div:active{
+
+/* .button-row div:hover,.button-row div:active{
     transform: translate(4px,4px);
     box-shadow: 0px 0px 0px black;
     transition: 0.1s;
+} */
+.unpressed{
+    box-shadow: 0px 0px 15px black;
 }
 
+.pressed{
+    color: white;
+    box-shadow: 0px 0px 15px white;
+    transition: 0.1s;
+}
