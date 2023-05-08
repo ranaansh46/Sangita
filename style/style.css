@@ -20,10 +20,24 @@ body {
     display: block;
     margin: auto;
 }
+#settings_Button{
+    display: flex;
+    flex-direction: column;
+    padding: 8px
+}
+#settings_Button i{
+    color: white;
+    transform: rotate(0deg);
+    transition: 1s;
+}
+#settings_Button i:Hover{
+    transform: rotate(360deg);
+    transition: 1s;
+}
 /* here the code for the buttons and flex wrapper starts */
 
 .flex-wrapper {
-    padding: 15px;
+    padding: 12px;
     display: flex;
     flex-direction: column;
     gap: 25px;
