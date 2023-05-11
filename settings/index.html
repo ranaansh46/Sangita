@@ -1,26 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sangita Settings</title>
-    <link rel="stylesheet" href="/style/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap"
-      rel="stylesheet"
-    />
-    <script
-      src="https://kit.fontawesome.com/7ab6830862.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
-    <div class="header">
-      <div class="logo">Sangita: Settings</div>
-        <a href="/index.html"><i class="fa-solid fa-arrow-left fa-2x" style="color: white; padding:10px;"></i></a>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sangita Settings</title>
+  <link rel="stylesheet" href="/style/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/7ab6830862.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="header">
+    <a href="/index.html"><i class="fa-solid fa-arrow-left fa-2x" style="color: white; padding:10px;"></i></a>
+    <div class="logo">Sangita: Settings</div>
+  </div>
+  <form action="">
+    <div class="center_Container">
+    <div class="heading">Settings</div>
+    <hr class="little_Divider">
+  </div>
+    <div class="form">
+      <div class="subheading">
+        <div class="music_Selection">
+          <input type="radio" id="Drum" name="music_Mod" value="Drum">
+          <label for="html">Drum</label>
+          <input type="radio" id="Phonk" name="music_Mod" value="Phonk">
+          <label for="css">Phonk</label>
+          <input type="radio" id="Flute" name="music_Mod" value="Flute">
+          <label for="javascript">Flute</label>
+          <input type="radio" id="Custom" name="music_Mod" value="Custom">
+          <label for="javascript">Custom</label>
+        </div>
+      </div>
+      <div class="flex-wrapper2">
+        <div id="column1">
+          <div class="subheading">
+            <div class="music_Selection">
+              <div class="input_Label">Music type for A : </A></div>
+              <select name="music_Files" id="file_A">
+                <option value="drum">Drum</option>
+                <option value="phonk">Phonk</option>
+                <option value="flute">Flute</option>
+              </select>
+            </div>
+          </div>
+          <div class="subheading">
+            <div class="music_Selection">
+              <div class="input_Label">Music type for S : </div>
+              <select name="music_Files" id="file_S">
+                <option value="drum">Drum</option>
+                <option value="phonk">Phonk</option>
+                <option value="flute">Flute</option>
+              </select>
+            </div>
+          </div>
+          <div class="subheading">
+            <div class="music_Selection">
+              <div class="input_Label">Music type for Z : </div>
+              <select name="music_Files" id="file_Z">
+                <option value="drum">Drum</option>
+                <option value="phonk">Phonk</option>
+                <option value="flute">Flute</option>
+              </select>
+            </div>
+          </div>
+          <div class="subheading">
+            <div class="music_Selection">
+              <div class="input_Label">Music type for X : </div>
+              <select name="music_Files" id="file_X">
+                <option value="drum">Drum</option>
+                <option value="phonk">Phonk</option>
+                <option value="flute">Flute</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div id="column2">
+          <div class="subheading">
+            <div class="music_Selection">
+              <div class="input_Label">Music type for J : </div>
+              <select name="music_Files" id="file_J">
+                <option value="drum">Drum</option>
+                <option value="phonk">Phonk</option>
+                <option value="flute">Flute</option>
+              </select>
+            </div>
+          </div>
+          <div class="subheading">
+            <div class="music_Selection">
+              <div class="input_Label">Music type for K : </div>
+              <select name="music_Files" id="file_K">
+                <option value="drum">Drum</option>
+                <option value="phonk">Phonk</option>
+                <option value="flute">Flute</option>
+              </select>
+            </div>
+          </div>
+          <div class="subheading">
+            <div class="music_Selection">
+              <div class="input_Label">Music type for N : </div>
+              <select name="music_Files" id="file_N">
+                <option value="drum">Drum</option>
+                <option value="phonk">Phonk</option>
+                <option value="flute">Flute</option>
+              </select>
+            </div>
+          </div>
+          <div class="subheading">
+            <div class="music_Selection">
+              <div class="input_Label">Music type for M : </div>
+              <select name="music_Files" id="file_M">
+                <option value="drum">Drum</option>
+                <option value="phonk">Phonk</option>
+                <option value="flute">Flute</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="subheading">
+        <div class="music_Selection">
+          <input type="submit" value="Save"  class="button">
+          <input type="reset" value="Cancel" class="button">
+        </div>
+      </div>
     </div>
-  </body>
+  </form>
+</body>
+
 </html>
