@@ -9,15 +9,15 @@ let button_n = document.getElementById('music-button7');
 let button_m = document.getElementById('music-button8');
 
 // adding sounds
-let sound_a = new Audio("Music/a.wav");
-let sound_s = new Audio("Music/s.wav");
-let sound_j = new Audio("Music/j.wav");
-let sound_k = new Audio("Music/k.wav");
-let sound_z = new Audio("Music/z.wav");
-let sound_x = new Audio("Music/x.wav");
-let sound_n = new Audio("Music/n.wav");
-let sound_m = new Audio("Music/m.wav");
-  
+let sound_a = new Audio("Music/Drum/a.wav");
+let sound_s = new Audio("Music/Drum/s.wav");
+let sound_j = new Audio("Music/Drum/j.wav");
+let sound_k = new Audio("Music/Drum/k.wav");
+let sound_z = new Audio("Music/Drum/z.wav");
+let sound_x = new Audio("Music/Drum/x.wav");
+let sound_n = new Audio("Music/Drum/n.wav");
+let sound_m = new Audio("Music/Drum/m.wav");  
+
 function play_sound(sound,button){
     sound.currentTime=0;
     sound.play();
