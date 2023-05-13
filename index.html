@@ -1,46 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sangita</title>
-    <link rel="stylesheet" href="style/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/7ab6830862.js" crossorigin="anonymous"></script>
-</head>
-
-<body>
-    <div class="header">
-        <div class="logo">
-            Sangita
-        </div>
-        <div id="settings_Button" class="">
-            <a href="/settings/index.html"><i class="fa-solid fa-gear fa-2x"></i></a>
-        </div>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <title>Sangita</title>
+  </head>
+  <body>
+    <div class="flex_Wrapper" style="font-family: 'Righteous', cursive; font-size: 36px; color: #f45b49;">Sangita</div>
+    <!-- <div class="flex_Wrapper">
+      <img src="/images/first_Page.png" id="middle_Image" />
+    </div> -->
+    <div class="flex_Wrapper">
+      <a href="/Drum/index.html"
+        ><div class="instruments" id="1">
+          <img src="/images/drum.png" alt="" /></div
+      ></a>
+      <a href="/Flute/index.html"
+        ><div class="instruments" id="2">
+          <img src="/images/flute.png" alt="" /></div
+      ></a>
+      <a href="/Phonk/index.html"
+        ><div class="instruments" id="3">
+          <img src="/images/phonk.png" alt="" /></div
+      ></a>
     </div>
-
-<!-- the code for buttons start from here -->
-
-    <div class="flex-wrapper"> <!-- the flex wrapper is a container which holds the button rows vertical -->
-        <div class="button-row">
-            <div id="music-button1" class="unpressed ">A</div>
-            <div id="music-button2" class="unpressed ">S</div>
-            <div id="music-button3" class="unpressed ">J</div>
-            <div id="music-button4" class="unpressed ">K</div>
-        </div>
-        <div class="button-row">
-            <div id="music-button5" class="unpressed ">Z</div>
-            <div id="music-button6" class="unpressed ">X</div>
-            <div id="music-button7" class="unpressed ">N</div>
-            <div id="music-button8" class="unpressed ">M</div>
-        </div>
-    </div>
-    <script src="script/main.js"></script>
-    <script src="script/script.js"></script>
-</body>
-
+  </body>
 </html>
+
+<style>
+  body {
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    gap:24px;
+    align-content: center;
+    justify-content: center;
+  }
+  .flex_Wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    justify-content: center;
+  }
+  .instruments {
+    display: flex;
+    justify-content: center;
+    padding: 24px;
+    font-size: 36px;
+    border-radius: 26px;
+    border: 4px solid #f3a13b;
+    max-width: 120px;
+    max-height: 120px;
+  }
+  .instruments:hover {
+    background-color: #f3a13b;
+  }
+  #middle_Image {
+    max-width: 450px;
+    max-height: 450px;
+  }
+</style>
