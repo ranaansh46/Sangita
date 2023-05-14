@@ -12,18 +12,34 @@
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/7ab6830862.js" crossorigin="anonymous"></script>
 </head>
+<style>
+    #record-button,
+    #play-button {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 20px;
+        font-size: 18px;
+        border-radius: 5px;
+        border: none;
+        background-color: #007bff;
+        color: #fff;
+    }
+</style>
 
 <body>
     <div class="header">
         <div class="logo">
             Sangita
         </div>
+        <button id="record-button">Record</button>
+        <button id="play-button">Play</button>
+
         <div id="settings_Button" class="">
             <a href="/settings/index.html"><i class="fa-solid fa-gear fa-2x"></i></a>
         </div>
     </div>
 
-<!-- the code for buttons start from here -->
+    <!-- the code for buttons start from here -->
 
     <div class="flex-wrapper"> <!-- the flex wrapper is a container which holds the button rows vertical -->
         <div class="button-row">
@@ -41,6 +57,7 @@
     </div>
     <script src="script/main.js"></script>
     <script src="script/script.js"></script>
+    <script src="/Drum/script/player.js"></script>
 </body>
 
 </html>
