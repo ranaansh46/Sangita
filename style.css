@@ -103,8 +103,6 @@ body {
 }
 .subheading{
     color: white;
-    font-family: 'Open Sans';
-    font-weight: 400;
 }
 .music_Selection{
     display: flex;

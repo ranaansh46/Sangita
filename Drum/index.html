@@ -6,11 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sangita</title>
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/7ab6830862.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.webrtc-experiment.com/RecordRTC.js"></script>
+    <script src="https://cdn.webrtc-experiment.com/RecordRTC/RecordRTC.Plugins.js
+    "></script>
+
 </head>
 <style>
     #record-button,
@@ -28,15 +32,19 @@
 
 <body>
     <div class="header">
+    <a href="/index.html"><i class="fa-solid fa-arrow-left fa-2x" style="color: white; padding:10px;"></i></a>
+        
+
         <div class="logo">
             Sangita
         </div>
-        <button id="record-button">Record</button>
-        <button id="play-button">Play</button>
 
-        <div id="settings_Button" class="">
+        <!-- <button id="record-button">Record</button> -->
+        
+
+        <!-- <div id="settings_Button" class="">
             <a href="/settings/index.html"><i class="fa-solid fa-gear fa-2x"></i></a>
-        </div>
+        </div> -->
     </div>
 
     <!-- the code for buttons start from here -->
@@ -57,7 +65,7 @@
     </div>
     <script src="script/main.js"></script>
     <script src="script/script.js"></script>
-    <script src="/Drum/script/player.js"></script>
+    <script src="/Drum/script/recorder.js"></script>
 </body>
 
 </html>
