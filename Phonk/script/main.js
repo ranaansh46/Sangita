@@ -31,33 +31,29 @@ function play_sound(sound,button){
 document.addEventListener('keypress', (e) => {
     keypressed = (e.key);
         
-    switch (keypressed) {
-        case 'a':
-            play_sound(sound_a,button_a);
-            break;
-        case 's':
-            play_sound(sound_s,button_s);
-            break;
-        case 'j':
-            play_sound(sound_j,button_j);
-            break;
-        case 'k':
-            play_sound(sound_k,button_k);
-            break;
-        case 'z':
-            play_sound(sound_z,button_z);
-            break;
-        case 'x':
-            play_sound(sound_x,button_x);
-            break;
-        case 'n':
-            play_sound(sound_n,button_n);
-            break;
-        case 'm':
-            play_sound(sound_m,button_m);
-            break;
-        default:
-            break;
-    }
+    if (keypressed == "a") {
+        play_sound(sound_a, button_a);
+      }
+      if (keypressed == "s") {
+        play_sound(sound_s, button_s);
+      }
+      if (keypressed == "j") {
+        play_sound(sound_j, button_j);
+      }
+      if (keypressed == "k") {
+        play_sound(sound_k, button_k);
+      }
+      if (keypressed == "z") {
+        play_sound(sound_z, button_z);
+      }
+      if (keypressed == "x") {
+        play_sound(sound_x, button_s);
+      }
+      if (keypressed == "n") {
+        play_sound(sound_n, button_n);
+      }
+      if (keypressed == "m") {
+        play_sound(sound_m, button_m);
+      }
 })
 

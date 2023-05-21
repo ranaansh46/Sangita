@@ -8,15 +8,26 @@ let button_x = document.getElementById('music-button6');
 let button_n = document.getElementById('music-button7');
 let button_m = document.getElementById('music-button8');
 
-// adding sounds
-let sound_a = new Audio("Music/Phonk/a.wav");
-let sound_s = new Audio("Music/Phonk/s.wav");
-let sound_j = new Audio("Music/Phonk/j.wav");
-let sound_k = new Audio("Music/Phonk/k.wav");
-let sound_z = new Audio("Music/Phonk/z.wav");
-let sound_x = new Audio("Music/Phonk/x.wav");
-let sound_n = new Audio("Music/Phonk/n.wav");
-let sound_m = new Audio("Music/Phonk/m.wav");  
+// // adding sounds
+// let sound_a = new Audio("Music/Phonk/a.wav");
+// let sound_s = new Audio("Music/Phonk/s.wav");
+// let sound_j = new Audio("Music/Phonk/j.wav");
+// let sound_k = new Audio("Music/Phonk/k.wav");
+// let sound_z = new Audio("Music/Phonk/z.wav");
+// let sound_x = new Audio("Music/Phonk/x.wav");
+// let sound_n = new Audio("Music/Phonk/n.wav");
+// let sound_m = new Audio("Music/Phonk/m.wav");  
+
+let Audio_1 = document.getElementById('music_File_1');
+let Audio_2 = document.getElementById('music_File_2');
+let Audio_3 = document.getElementById('music_File_3');
+let Audio_4 = document.getElementById('music_File_4');
+let Audio_5 = document.getElementById('music_File_5');
+let Audio_6 = document.getElementById('music_File_6');
+let Audio_7 = document.getElementById('music_File_7');
+let Audio_8 = document.getElementById('music_File_8');
+
+let sound_a = new Audio(URL.createObjectURL(Audio_1))
 
 function play_sound(sound,button){
     sound.currentTime=0;
