@@ -8,16 +8,7 @@ let button_x = document.getElementById('music-button6');
 let button_n = document.getElementById('music-button7');
 let button_m = document.getElementById('music-button8');
 
-// // adding sounds
-// let sound_a = new Audio("Music/Phonk/a.wav");
-// let sound_s = new Audio("Music/Phonk/s.wav");
-// let sound_j = new Audio("Music/Phonk/j.wav");
-// let sound_k = new Audio("Music/Phonk/k.wav");
-// let sound_z = new Audio("Music/Phonk/z.wav");
-// let sound_x = new Audio("Music/Phonk/x.wav");
-// let sound_n = new Audio("Music/Phonk/n.wav");
-// let sound_m = new Audio("Music/Phonk/m.wav");  
-
+// adding sounds
 let Audio_1 = document.getElementById('music_File_1');
 let Audio_2 = document.getElementById('music_File_2');
 let Audio_3 = document.getElementById('music_File_3');
@@ -27,48 +18,96 @@ let Audio_6 = document.getElementById('music_File_6');
 let Audio_7 = document.getElementById('music_File_7');
 let Audio_8 = document.getElementById('music_File_8');
 
-let sound_a = new Audio(URL.createObjectURL(Audio_1))
+let sound_a, sound_s, sound_j, sound_k, sound_z, sound_x, sound_n, sound_m;
 
-function play_sound(sound,button){
-    sound.currentTime=0;
-    sound.play();
-    button.classList.add('pressed')
-    setTimeout(() => {
-        button.classList.remove('pressed')
-    }, sound.duration + 250);
+function createAudioObject(fileInput, callback) {
+  const reader = new FileReader();
+  reader.onload = function (e) {
+    const audio = new Audio();
+    audio.src = e.target.result;
+    callback(audio);
+  };
+  reader.readAsDataURL(fileInput.files[0]);
 }
+
+function play_sound(sound, button) {
+  sound.currentTime = 0;
+  sound.play();
+  button.classList.add('pressed');
+  setTimeout(() => {
+    button.classList.remove('pressed');
+  }, sound.duration + 250);
+}
+
+// Create audio objects when file inputs change
+Audio_1.addEventListener('change', function () {
+  createAudioObject(this, function (audio) {
+    sound_a = audio;
+  });
+});
+Audio_2.addEventListener('change', function () {
+  createAudioObject(this, function (audio) {
+    sound_s = audio;
+  });
+});
+Audio_3.addEventListener('change', function () {
+  createAudioObject(this, function (audio) {
+    sound_j = audio;
+  });
+});
+Audio_4.addEventListener('change', function () {
+  createAudioObject(this, function (audio) {
+    sound_k = audio;
+  });
+});
+Audio_5.addEventListener('change', function () {
+  createAudioObject(this, function (audio) {
+    sound_z = audio;
+  });
+});
+Audio_6.addEventListener('change', function () {
+  createAudioObject(this, function (audio) {
+    sound_x = audio;
+  });
+});
+Audio_7.addEventListener('change', function () {
+  createAudioObject(this, function (audio) {
+    sound_n = audio;
+  });
+});
+Audio_8.addEventListener('change', function () {
+  createAudioObject(this, function (audio) {
+    sound_m = audio;
+  });
+});
 
 // this section makes the sound on keypress
 document.addEventListener('keypress', (e) => {
     keypressed = (e.key);
         
-    switch (keypressed) {
-        case 'a':
-            play_sound(sound_a,button_a);
-            break;
-        case 's':
-            play_sound(sound_s,button_s);
-            break;
-        case 'j':
-            play_sound(sound_j,button_j);
-            break;
-        case 'k':
-            play_sound(sound_k,button_k);
-            break;
-        case 'z':
-            play_sound(sound_z,button_z);
-            break;
-        case 'x':
-            play_sound(sound_x,button_x);
-            break;
-        case 'n':
-            play_sound(sound_n,button_n);
-            break;
-        case 'm':
-            play_sound(sound_m,button_m);
-            break;
-        default:
-            break;
-    }
+    if (keypressed == "a") {
+        play_sound(sound_a, button_a);
+      }
+      if (keypressed == "s") {
+        play_sound(sound_s, button_s);
+      }
+      if (keypressed == "j") {
+        play_sound(sound_j, button_j);
+      }
+      if (keypressed == "k") {
+        play_sound(sound_k, button_k);
+      }
+      if (keypressed == "z") {
+        play_sound(sound_z, button_z);
+      }
+      if (keypressed == "x") {
+        play_sound(sound_x, button_x);
+      }
+      if (keypressed == "n") {
+        play_sound(sound_n, button_n);
+      }
+      if (keypressed == "m") {
+        play_sound(sound_m, button_m);
+      }
 })
 
