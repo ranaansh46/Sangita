@@ -38,7 +38,7 @@
       stopButton.addEventListener("click", stopRecording);
       testButton.addEventListener("click", () => {
         startRecording();
-        setTimeout(stopRecording(), sound.duration + 250);
+        setTimeout(stopRecording(),250);
       });
       function startRecording() {
         navigator.mediaDevices

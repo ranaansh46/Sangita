@@ -47,7 +47,7 @@ document.addEventListener('keypress', (e) => {
         play_sound(sound_z, button_z);
       }
       if (keypressed == "x") {
-        play_sound(sound_x, button_s);
+        play_sound(sound_x, button_x);
       }
       if (keypressed == "n") {
         play_sound(sound_n, button_n);
