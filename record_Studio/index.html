@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+    <title>Record Studio</title>
+  </head>
+
+  <body>
+    <h1>Record Studio</h1>
+
+    <br />
+    <video id="videoPlayer" width="600" controls></video>
+    <br />
+    <div class="Container">
+      <audio id="audioPlayer"  controls></audio>
+    </div>
+    <div class="Container">
+      <button id="recordButton">Record</button>
+      <button id="stopButton" disabled>Stop</button>
+      <button id="testButton">test</button>
+      </div>
+      <p>💡 Tip: if recording doesnt work at first please refresh and use the test button prior to recording, presss test button and select sangita screen on screen selection stop recording immediatly,
+        Then press recording button and then click on the sangita screen and enable "Share audio option".
+      </p>
+    <script>
+      let recordButton = document.getElementById("recordButton");
+      let stopButton = document.getElementById("stopButton");
+      let videoPlayer = document.getElementById("videoPlayer");
+      let audioPlayer = document.getElementById("audioPlayer");
+      let testButton = document.getElementById("testButton");
+      let mediaRecorder;
+      let recordedChunks = [];
+
+      recordButton.addEventListener("click", startRecording);
+      stopButton.addEventListener("click", stopRecording);
+      testButton.addEventListener("click", () => {
+        startRecording();
+        setTimeout(stopRecording(), sound.duration + 250);
+      });
+      function startRecording() {
+        navigator.mediaDevices
+          .getDisplayMedia({ audio: true, video: true })
+          .then(function (stream) {
+            videoPlayer.srcObject = stream;
+            mediaRecorder = new MediaRecorder(stream);
+            mediaRecorder.addEventListener("dataavailable", function (event) {
+              recordedChunks.push(event.data);
+            });
+            mediaRecorder.start();
+            updateButtons(true);
+          })
+          .catch(function (error) {
+            console.error("Error accessing system audio:", error);
+          });
+      }
+
+      function stopRecording() {
+        mediaRecorder.stop();
+        updateButtons(false);
+        saveRecording();
+      }
+
+      function saveRecording() {
+        let blob = new Blob(recordedChunks, { type: "audio/webm" });
+        recordedChunks = [];
+
+        audioPlayer.src = URL.createObjectURL(blob);
+        console.log(audioPlayer.src);
+        audioPlayer.play();
+      }
+
+      function updateButtons(isRecording) {
+        recordButton.disabled = isRecording;
+        stopButton.disabled = !isRecording;
+        testButton.disabled = isRecording;
+      }
+    </script>
+    <style>
+      video{
+        border-radius: 16px;
+        box-shadow: 0px 0px 16px rgb(158, 156, 156);
+      }
+      body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgb(39, 39, 39);
+      }
+      h1{
+        font-size: 36px;
+        font-family: 'ubuntu';
+        color: aliceblue;
+      }
+      .Container{
+        display: flex;
+        flex-direction: row;
+        gap: 24px;
+        margin: 12px 4px 8px 4px;
+      }
+      button{
+        border-radius: 12px;
+        border: 0px;
+        padding:4px 8px 4px 8px;
+        font-size: 24px;
+      }
+      p{
+        color: white;
+        font-size: 16px;
+        font-family: 'ubuntu';
+      }
+    </style>
+  </body>
+</html>
